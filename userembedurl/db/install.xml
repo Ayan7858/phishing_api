@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/userembedurl/db" VERSION="2024062300" COMMENT="User Embed URL plugin">
+    <TABLES>
+        <TABLE NAME="local_userembedurl_urls" COMMENT="Table to store URLs for different users">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="User ID"/>
+                <FIELD NAME="url" TYPE="char" LENGTH="255" NOTNULL="true" COMMENT="Embed URL"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="userid" TYPE="unique" FIELDS="userid"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
